@@ -3,175 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef Emad</title>
+    <meta name="description" content="Youssef Emad — Web Developer & Computer Vision Engineer. I build fast, responsive, and beautiful websites. Check out my portfolio and let's work together.">
+    <title>Youssef Emad — Web Developer & CV Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Youssef Emad</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#whatido">Services</a></li>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Youssef.</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-        <div class="home-left">
-            <h2>Nice to meet you!</h2>
-            <h2>I'm <u>Youssef Emad</u></h2>
-            <p>I build websites that look great, load fast, and do exactly what you need them to do — from custom designs to powerful features that bring real results. With every project, I focus on clean code, smooth user experience, and long-term performance. Ready to take your website to the next level?
-            <button><a href="#contact">Contact Us</a></button>
-            </p>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div>
-            <img src="img/Youssef Emad.png" alt="Youssef Emad logo">
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section id="hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-bg-glow glow-1"></div>
+        <div class="hero-bg-glow glow-2"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="pulse-dot"></span>
+                    Available for freelancing
+                </div>
+                <p class="hero-greeting reveal">Nice to meet you! 👋</p>
+                <h1 class="hero-name reveal">
+                    I'm <span class="gradient-text">Youssef Emad</span>
+                </h1>
+                <p class="hero-title reveal">
+                    <span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor">|</span>
+                </p>
+                <p class="hero-description reveal">
+                    I build websites that look great, load fast, and do exactly what you need them to do — from custom designs to powerful features that bring real results.
+                </p>
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="hero-social reveal">
+                    <a href="https://github.com/youssefemad20" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/youssefemadelsayed/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/youssefemad.ai/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@youssefemadai" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/youssefemad8157" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@youssefemad.ai" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper reveal-scale">
+                <div class="hero-image-ring">
+                    <img src="img/Youssef Emad.png" alt="Youssef Emad — Web Developer and Computer Vision Engineer">
+                </div>
+                <div class="hero-float-badge badge-1">
+                    <i class="fa-solid fa-code"></i> Web Developer
+                </div>
+                <div class="hero-float-badge badge-2">
+                    <i class="fa-solid fa-eye"></i> CV Engineer
+                </div>
+            </div>
         </div>
-        <br>
     </section>
-    <section id="whatido">
-        <h2 class="title-services">What i do</h2>
-        <div class="services">
-            <div class="service">
-                <div class="imgservice">
-                    <img src="img/Website Design & Development.png" alt="Website Design">
-                    <h2>Website Design & Development</h2>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">My Services</h2>
+                <p class="section-subtitle">I offer professional web solutions — from beautiful designs to high-performance development.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal stagger-1">
+                    <div class="service-icon icon-design">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Website Design & Development</h3>
                     <p>I design and develop professional websites that are fast, responsive, and user-friendly — from simple landing pages to complex web applications.</p>
-                    <button><a href="#contact">Contact us</a></button>
                 </div>
-            </div>
-            <div class="service">
-                <div class="imgservice">
-                    <img src="img/Frontend Development.png" alt="Frontend Development">
-                    <h2>Frontend Development</h2>
+                <div class="service-card reveal stagger-2">
+                    <div class="service-icon icon-code">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
                     <p>I transform designs into clean, interactive code using HTML, CSS, and JavaScript, ensuring an excellent user experience across all devices.</p>
-                    <button><a href="#contact">Contact us</a></button>
                 </div>
-            </div>
-            <div class="service">
-                <div class="imgservice">
-                    <img src="img/Performance & SEO Optimization.png" alt="SEO Optimization">
-                    <h2>Performance & SEO Optimization</h2>
+                <div class="service-card reveal stagger-3">
+                    <div class="service-icon icon-seo">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Performance & SEO Optimization</h3>
                     <p>I optimize your website's speed and search engine ranking to help you get more visitors and achieve better results online.</p>
-                    <button><a href="#contact">Contact us</a></button>
                 </div>
             </div>
         </div>
     </section>
-    <section id="skills">
-        <h2 class="title-skills">My skills</h2>
-        <div class="skills">
-            <div class="skill">
-                <div class="skilltitle"><img src="img/Html.png" alt="skill img"><h1>HTML</h1></div>
-                <p>3 Years Experience</p>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">My Toolbox</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies and tools I use to bring ideas to life.</p>
             </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/CSS.png" alt="skill img"><h1>CSS</h1></div>
-                <p>3 Years Experience</p>
+
+            <!-- Web Development Skills Category -->
+            <div class="skills-category-title reveal">
+                Web Development Skills
             </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/javascript.png" alt="skill img"><h1>JavaScript</h1></div>
-                <p>3 Years Experience</p>
+            <div class="skills-wrapper" id="skills-web-wrapper">
+                <div class="skill-item reveal stagger-1">
+                    <div class="skill-icon-box"><img src="img/Html.png" alt="HTML"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>HTML</h4>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="90"></div></div>
+                        <span class="skill-experience">3 Years Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-2">
+                    <div class="skill-icon-box"><img src="img/CSS.png" alt="CSS"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>CSS</h4>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="85"></div></div>
+                        <span class="skill-experience">3 Years Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-3">
+                    <div class="skill-icon-box"><img src="img/javascript.png" alt="JavaScript"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>JavaScript</h4>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="75"></div></div>
+                        <span class="skill-experience">3 Years Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-4">
+                    <div class="skill-icon-box"><img src="img/git.png" alt="Git"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>Git</h4>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="70"></div></div>
+                        <span class="skill-experience">1 Year Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-5">
+                    <div class="skill-icon-box"><img src="img/github.png" alt="GitHub"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>GitHub</h4>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="70"></div></div>
+                        <span class="skill-experience">1 Year Experience</span>
+                    </div>
+                </div>
             </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/python.png" alt="skill img"><h1>Python</h1></div>
-                <p>3 Years Experience</p>
+
+            <!-- Computer Vision Skills Category -->
+            <div class="skills-category-title reveal" style="margin-top: 3.5rem;">
+                Computer Vision & Programming Skills
             </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/cpp.png" alt="skill img"><h1>C++</h1></div>
-                <p>0.5 Year Experience</p>
-            </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/git.png" alt="skill img"><h1>Git</h1></div>
-                <p>1 Year Experience</p>
-            </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/github.png" alt="skill img"><h1>GitHub</h1></div>
-                <p>1 Year Experience</p>
-            </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/OpenCV.png" alt="skill img"><h1>OpenCV</h1></div>
-                <p>1 Year Experience</p>
-            </div>
-            <div class="skill">
-                <div class="skilltitle"><img src="img/numpy.png" alt="skill img"><h1>NumPy</h1></div>
-                <p>1 Year Experience</p>
+            <div class="skills-wrapper" id="skills-cv-wrapper">
+                <div class="skill-item reveal stagger-1">
+                    <div class="skill-icon-box"><img src="img/python.png" alt="Python"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>Python</h4>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="100"></div></div>
+                        <span class="skill-experience">3 Years Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-2">
+                    <div class="skill-icon-box"><img src="img/OpenCV.png" alt="OpenCV"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>OpenCV</h4>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="65"></div></div>
+                        <span class="skill-experience">1 Year Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-3">
+                    <div class="skill-icon-box"><img src="img/numpy.png" alt="NumPy"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>NumPy</h4>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="85"></div></div>
+                        <span class="skill-experience">1 Year Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-3">
+                    <div class="skill-icon-box"><img src="img/pandas.png" alt="Pandas"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>Pandas</h4>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="80"></div></div>
+                        <span class="skill-experience">1 Year Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-4">
+                    <div class="skill-icon-box"><img src="img/Matplotlib.webp" alt="Matplotlib"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>Matplotlib</h4>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="80"></div></div>
+                        <span class="skill-experience">1 Year Experience</span>
+                    </div>
+                </div>
+                <div class="skill-item reveal stagger-4">
+                    <div class="skill-icon-box"><img src="img/cpp.png" alt="C++"></div>
+                    <div class="skill-info">
+                        <div class="skill-info-top">
+                            <h4>C++</h4>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="75"></div></div>
+                        <span class="skill-experience">1 Years Experience</span>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </section>
-    <br>
-    <section id="projects">
-        <h2 class="title-projects">My Projects</h2>
-        <div class="projectcontainer">
-            <div class="project">
-                <div class="projectimg">
-                    <img src="img/AgroVision.png" alt="project img">
-                </div>
-                <h2>AgroVision</h2>
-                <button><a href="https://youssefemad20.github.io/ArgroVision/">View Project</a></button>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work that I'm proud of.</p>
             </div>
-            <div class="project">
-                <div class="projectimg">
-                    <img src="img/Food lover.png" alt="project img">
-                </div>
-                <h2>Egyption Food Lover</h2>
-                <button><a href="https://youssefemad20.github.io/Egyption-Food-Lover/">View Project</a></button>
+            <!-- Web Projects -->
+            <div class="skills-category-title reveal">
+                Web Development Projects
             </div>
-            <div class="project">
-                <div class="projectimg">
-                    <img src="img/zbox.png" alt="project img">
+            <div class="projects-grid">
+                <div class="project-card reveal stagger-1">
+                    <div class="project-image">
+                        <img src="img/AgroVision.png" alt="AgroVision project screenshot">
+                        <div class="project-overlay">
+                            <a href="https://youssefemad20.github.io/ArgroVision/" target="_blank" rel="noopener" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3>AgroVision</h3>
+                        <p>An agricultural technology platform helping farmers with smart crop management and monitoring.</p>
+                    </div>
                 </div>
-                <h2>Z-box</h2>
-                <button><a href="https://youssefemad20.github.io/z-box/">View Project</a></button>
+
+                <div class="project-card reveal stagger-2">
+                    <div class="project-image">
+                        <img src="img/Food lover.png" alt="Egyptian Food Lover project screenshot">
+                        <div class="project-overlay">
+                            <a href="https://youssefemad20.github.io/Egyption-Food-Lover/" target="_blank" rel="noopener" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <h3>Egyptian Food Lover</h3>
+                        <p>A vibrant food showcase website celebrating the best of Egyptian cuisine and culinary traditions.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal stagger-3">
+                    <div class="project-image">
+                        <img src="img/zbox.png" alt="Z-box project screenshot">
+                        <div class="project-overlay">
+                            <a href="https://youssefemad20.github.io/z-box/" target="_blank" rel="noopener" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3>Z-Box</h3>
+                        <p>A modern e-commerce product landing page with clean design and smooth user experience.</p>
+                    </div>
+                </div>
             </div>
-            <!-- <div class="project">
-                <div class="projectimg">
-                    <img src="#" alt="project img">
-                </div>
-                <h2>Project Name</h2>
-                <button><a href="#">View Project</a></button>
+
+            <!-- Computer Vision Projects -->
+            <div class="skills-category-title reveal" style="margin-top: 3.5rem;">
+                Computer Vision Projects
             </div>
-            <div class="project">
-                <div class="projectimg">
-                    <img src="#" alt="project img">
+            <div class="projects-grid">
+                <div class="project-card reveal stagger-1">
+                    <div class="project-image">
+                        <img src="img/visionflow.png" alt="VisionFlow AI project screenshot">
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssefemad20" target="_blank" rel="noopener" class="btn btn-primary">
+                                <i class="fa-brands fa-github"></i> View Source
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>YOLOv8</span>
+                            <span>NumPy</span>
+                        </div>
+                        <h3>VisionFlow AI</h3>
+                        <p>Real-time multi-object tracking and velocity estimation system utilizing custom YOLOv8 models optimized for traffic analytics.</p>
+                    </div>
                 </div>
-                <h2>Project Name</h2>
-                <button><a href="#">View Project</a></button>
-            </div> -->
+            </div>
         </div>
     </section>
-    <br>
-    <section id="contact">
-        <div class="contact-massege">
-            <h1>Contact me</h1>
-            <p><i class="fa-regular fa-envelope"></i> youssefemad.jo2009@gmail.com</p>
-            <p><b>Freelancing:</b> Available</p>
-            <p><i class="fa-solid fa-phone"></i> +20 101 422 3308</p>
-            <div class="social-media-div">
-            <a href="https://www.facebook.com/youssefemad8157" class="social-media"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/youssefemad.ai/" class="social-media"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/youssefemadelsayed/" class="social-media"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/youssefemad20" class="social-media"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.youtube.com/@youssefemadai" class="social-media"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@youssefemad.ai" class="social-media"><i class="fa-brands fa-tiktok"></i></a>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Have a project in mind? Let's discuss and bring it to life.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <h3>Let's Talk!</h3>
+                    <div class="contact-availability">
+                        <span class="pulse-dot"></span>
+                        Available for freelancing
+                    </div>
+                    <p>I'm always excited to work on new projects. Whether you need a website, web application, or anything in between — drop me a message!</p>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Email</h4>
+                            <p>youssefemad.jo2009@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Phone</h4>
+                            <p>+20 101 422 3308</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://www.facebook.com/youssefemad8157" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/youssefemad.ai/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/youssefemadelsayed/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/youssefemad20" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.youtube.com/@youssefemadai" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@youssefemad.ai" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal-right" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <span class="error-msg">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <span class="error-msg">Please enter a valid email</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+                        <span class="error-msg">Please enter a subject</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                        <span class="error-msg">Please enter a message</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
         </div>
-        <form action="#">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea name="" id="" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        
     </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Youssef Emad. All rights reserved.</p>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 <span class="gradient-text">Youssef Emad</span>. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
