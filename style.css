@@ -735,10 +735,6 @@ img {
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.skill-bar-fill.animated {
-    /* Width is set via inline style data-percent */
-}
-
 .skill-experience {
     font-size: 0.75rem;
     color: var(--text-muted);
@@ -756,8 +752,9 @@ img {
    ============================================ */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 }
 
 .project-card {
@@ -767,6 +764,9 @@ img {
     overflow: hidden;
     transition: all var(--transition-slow);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -814,6 +814,9 @@ img {
 
 .project-details {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-tech {
@@ -847,6 +850,7 @@ img {
     font-size: 0.88rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    margin-top: auto;
 }
 
 /* ============================================
