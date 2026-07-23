@@ -25,10 +25,10 @@ function initTypewriter() {
 
     const words = [
         'Web Developer',
-        'Computer Vision Engineer',
         'Frontend Developer',
-        'Problem Solver',
-        'Python Developer'
+        'React Developer',
+        'UI/UX Enthusiast',
+        'Problem Solver'
     ];
     let wordIndex = 0;
     let charIndex = 0;
